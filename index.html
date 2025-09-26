@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardian Sense - AI-Verified Fall Detection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-color: #f8fafc;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 text-center mb-4;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-500 text-center mb-12 max-w-3xl mx-auto;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-600">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                <span class="text-blue-600">Guardian</span>Sense
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#problem" class="hover:text-blue-600">The Problem</a>
+                <a href="#solution" class="hover:text-blue-600">Our AI Solution</a>
+                <a href="#demo" class="hover:text-blue-600">Demo & Data</a>
+                <a href="#tech" class="hover:text-blue-600">Tech Stack</a>
+                <a href="https://github.com/your-username/guardian-sense" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">View on GitHub</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg py-20 lg:py-32">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4 leading-tight">AI-Verified Fall Detection. <br>No More False Alarms.</h1>
+            <p class="text-xl text-gray-500 mb-8 max-w-3xl mx-auto">Guardian Sense uses a powerful Edge AI model, trained on over 2200 images, to visually confirm falls, providing an unparalleled level of safety and reliability.</p>
+            <div class="flex justify-center">
+                <a href="#demo" class="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300">See the AI in Action</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem Section -->
+    <section id="problem" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">The Flaw in Modern Fall Detectors</h2>
+            <p class="section-subtitle">While essential, fall detection systems are plagued by false positives. Even "smart" solutions with user confirmation fail when a user is unconscious or unable to respond, creating a critical gap in safety.</p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">The "Cry-Wolf" Effect</h3>
+                    <p>Accidental drops and jolts trigger frequent false alarms, desensitizing caregivers and eroding trust in the system. When every alert is treated as a potential non-emergency, the response to a real one can be dangerously slow.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">The Unresponsive User Problem</h3>
+                    <p>Systems that rely on a user to press a button to cancel an alert are fundamentally flawed. In the most severe falls, the user may be unable to respond, rendering the confirmation feature useless and delaying help when it's needed most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The AI Solution Section -->
+    <section id="solution" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Our Solution: A Two-Device AI Verification System</h2>
+            <p class="section-subtitle">We built an intelligent, communicating ecosystem. A lightweight wearable detects a potential fall, and a stationary AI monitor visually confirms it before sending an alert.</p>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center">
+                    <img src="./media/Screenshot 2025-09-26 021854.png" alt="Wearable Pendant Prototype" class="rounded-lg shadow-lg w-full mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Device A: The Wearable Pendant</h3>
+                    <p>A compact, non-intrusive device worn by the user. Its sole job is to detect a potential fall using a tilt sensor and instantly signal the AI Monitor.</p>
+                </div>
+                <div class="text-center">
+                    <img src="./media/Screenshot 2025-09-26 084837.png" alt="AI Monitor Prototype" class="rounded-lg shadow-lg w-full mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">Device B: The AI Monitor</h3>
+                    <p>A stationary unit with a camera that sits on a shelf. It houses our Edge Impulse ML model, trained to distinguish between real falls and normal postures.</p>
+                </div>
+            </div>
+            <div class="max-w-5xl mx-auto mt-12 border-t pt-8 border-gray-200">
+                <h3 class="text-2xl font-semibold text-gray-800 text-center mb-6">Real-Time Communication Workflow</h3>
+                 <div class="grid md:grid-cols-3 gap-4 text-center">
+                     <!-- Step 1 -->
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-4">1</div>
+                        <h4 class="text-xl font-semibold text-gray-800">Potential Fall</h4>
+                        <p class="mt-1">The wearable's tilt sensor is triggered and it instantly sends a "CHECK_FALL" signal to the AI Monitor via ESP-NOW.</p>
+                    </div>
+                     <!-- Step 2 -->
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-4">2</div>
+                        <h4 class="text-xl font-semibold text-gray-800">AI Verification</h4>
+                        <p class="mt-1">The AI Monitor wakes, captures an image, and runs its ML model to classify the scene as either a `fall` or `normal`.</p>
+                    </div>
+                     <!-- Step 3 -->
+                    <div class="p-6">
+                        <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-4">3</div>
+                        <h4 class="text-xl font-semibold text-gray-800">Confirmed Alert</h4>
+                        <p class="mt-1">Only if the AI confirms a fall is a Telegram alert sent to the caregiver. False alarms are silently ignored.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Demo & Data Section -->
+    <section id="demo" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Live Demo & AI Model Data</h2>
+            <p class="section-subtitle">Watch Guardian Sense distinguish between a false alarm and a real emergency, and see the data behind our powerful Edge AI model.</p>
+            
+            <!-- YouTube Video -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-semibold text-gray-800 text-center mb-6">Watch the Full Demo</h3>
+                <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto rounded-lg overflow-hidden shadow-2xl">
+                    <iframe src="https://www.youtube.com/embed/EzCF61Dqsik" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Data & Images -->
+            <div>
+                 <h3 class="text-2xl font-semibold text-gray-800 text-center mb-6">Project Screenshots & Data</h3>
+                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <!-- Edge Impulse Dataset -->
+                     <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                         <img src="./media/Screenshot 2025-09-26 084837.png" alt="Edge Impulse Dataset" class="rounded-md mb-3 border">
+                         <h4 class="font-semibold text-gray-700">Edge Impulse Dataset</h4>
+                         <p class="text-sm">Our model was trained on a robust dataset of over 2200 images, categorized into `fall` and `normal` classes.</p>
+                     </div>
+                     <!-- Model Accuracy -->
+                     <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                         <img src="./media/Screenshot 2025-09-26 084907.png" alt="Model Accuracy" class="rounded-md mb-3 border">
+                         <h4 class="font-semibold text-gray-700">ML Model Performance</h4>
+                         <p class="text-sm">The final trained model achieved high accuracy, ensuring reliable classification on the device.</p>
+                     </div>
+                     <!-- Serial Monitor Communication -->
+                     <div class="bg-gray-50 p-4 rounded-lg shadow-md">
+                         <img src="./screenshots/serial-monitor.png" alt="Serial Monitor Communication" class="rounded-md mb-3 border">
+                         <h4 class="font-semibold text-gray-700">ESP-NOW Communication</h4>
+                         <p class="text-sm">Screenshot of the serial monitors showing the "CHECK_FALL" signal and the AI's "fall confirmed" response.</p>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Tech Stack & Hardware</h2>
+            <p class="section-subtitle">This project combines embedded systems, machine learning, and cloud connectivity.</p>
+            <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-semibold text-gray-700">XIAO ESP32-S3</span><p class="text-sm">Microcontrollers</p></div>
+                <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-semibold text-gray-700">Arduino (C++)</span><p class="text-sm">Firmware</p></div>
+                <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-semibold text-gray-700">Edge Impulse</span><p class="text-sm">Edge AI / ML Platform</p></div>
+                <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-semibold text-gray-700">ESP-NOW</span><p class="text-sm">Device-to-Device Protocol</p></div>
+                <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-semibold text-gray-700">I2C LCD Display</span><p class="text-sm">User Interface</p></div>
+                <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-semibold text-gray-700">Tilt Sensor</span><p class="text-sm">Trigger</p></div>
+                <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-semibold text-gray-700">RGB LED & Buzzer</span><p class="text-sm">Alert System</p></div>
+                <div class="p-4 bg-white rounded-lg shadow-sm"><span class="font-semibold text-gray-700">Telegram API</span><p class="text-sm">Notifications</p></div>
+            </div>
+        </div>
+    </section>
+    
+     <!-- Team Section -->
+    <section id="team" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Meet the Team</h2>
+            <p class="section-subtitle">This project was brought to life by a passionate team of student engineers from Model Engineering College.</p>
+            <div class="flex flex-wrap justify-center gap-12">
+                <!-- Team Member 1 -->
+                <div class="text-center">
+                    <img class="w-32 h-32 rounded-full mx-auto shadow-lg mb-2" src="./images/abhin-krishna.jpg" alt="Abhin Krishna">
+                    <h4 class="text-lg font-semibold text-gray-800">Abhin Krishna</h4>
+                    <p class="text-gray-500">Project Lead & Firmware Dev</p>
+                </div>
+                <!-- Team Member 2 -->
+                 <div class="text-center">
+                    <img class="w-32 h-32 rounded-full mx-auto shadow-lg mb-2" src="./images/team-member-2.jpg" alt="Team Member 2">
+                    <h4 class="text-lg font-semibold text-gray-800">Team Member 2</h4>
+                    <p class="text-gray-500">Hardware & AI Model Lead</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-2"><span class="text-blue-400">Guardian</span>Sense</h3>
+            <p class="mb-6">Building a safer, more trustworthy future with Edge AI.</p>
+            <div class="flex justify-center space-x-6">
+                 <a href="https://github.com/your-username/guardian-sense" target="_blank" class="text-gray-400 hover:text-white">GitHub Repository</a>
+                 <span class="text-gray-500">|</span>
+                 <a href="mailto:contact@yourteam.com" class="text-gray-400 hover:text-white">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
