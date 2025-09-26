@@ -4,9 +4,16 @@
 
 An intelligent, wearable fall detection system designed to eliminate false alarms through a smart user-confirmation feature. Built for the modern caregiver and independent senior.
 
-[![Watch the video](https://img.youtube.com/vi/EzCF61Dqsik/0.jpg)](https://www.youtube.com/watch?v=EzCF61Dqsik)
+
+<p align="center">
+  <img src="./media/concept.png" alt="Demo Image" width="400"/>
+</p>
 
 ---
+
+## Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/EzCF61Dqsik/0.jpg)](https://www.youtube.com/watch?v=EzCF61Dqsik)
 
 ## Problem Statement
 
